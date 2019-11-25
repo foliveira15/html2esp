@@ -12,7 +12,7 @@ MainWindow::MainWindow(QWidget *parent)
     view->setMinimumSize(500,500);
    atualizaPagina();
    atualizaCode();
-   ui->geral->addWidget(view);
+   ui->centro->addWidget(view);
 
 }
 
