@@ -26,6 +26,7 @@ private slots:
 private:
     Ui::MainWindow *ui;
     void atualizaPagina();
+    void atualizaCode();
     QString html;
     QString head;
     QString body;

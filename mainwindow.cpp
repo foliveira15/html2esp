@@ -9,8 +9,9 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    view->setMinimumSize(800,500);
+    view->setMinimumSize(500,500);
    atualizaPagina();
+   atualizaCode();
    ui->geral->addWidget(view);
 
 }
@@ -25,7 +26,17 @@ void MainWindow::atualizaPagina()
     html = ui->headCode->toPlainText() + ui->bodyCode->toPlainText() + ui->footerCode->toPlainText();
     view->setHtml(html);
     view->show();
+    atualizaCode();
+}
 
+void MainWindow::atualizaCode()
+{
+    head = "const char INDEX_HEAD[] PROGMEM = R""=====(\n" + ui->headCode->toPlainText() + ")====="";\n\n";
+    body = "const char INDEX_BODY[] PROGMEM = R""=====(\n" + ui->bodyCode->toPlainText() + ")====="";\n\n";
+    footer = "const char INDEX_FOOTER[] PROGMEM = R""=====(\n" + ui->footerCode->toPlainText() + ")====="";";
+    ui->espCode->setPlainText(head);
+    ui->espCode->appendPlainText(body);
+    ui->espCode->appendPlainText(footer);
 }
 
 
