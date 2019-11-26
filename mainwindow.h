@@ -49,7 +49,7 @@ private:
     QString footer;
     QWebEngineView *view = new QWebEngineView(this);
     QString local_arquivo;
-    boolean salvo;
+    bool salvo;
     about *About;
 };
 #endif // MAINWINDOW_H
