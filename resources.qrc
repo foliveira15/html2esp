@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>resources/icons/about.svg</file>
+        <file>resources/icons/export.svg</file>
+        <file>resources/icons/new.svg</file>
+        <file>resources/icons/open.svg</file>
+        <file>resources/icons/print.svg</file>
+        <file>resources/icons/save.svg</file>
+        <file>resources/icons/saveas.svg</file>
+        <file>resources/icons/quit.svg</file>
+    </qresource>
+    <qresource prefix="/imgs">
+        <file>resources/imgs/logo.jfif</file>
+    </qresource>
+</RCC>
